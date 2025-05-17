@@ -263,7 +263,7 @@
     <div class="contact-section">
       <h2>8. Contact Us</h2>
       <p>For questions about this policy or to exercise your data rights:</p>
-      <p>Email: <a href="mailto:ak375450@gmail.com">ak375456@gmail.com</a></p>
+      <p>Email: <a href="mailto:ak375456@gmail.com">ak375456@gmail.com</a></p>
       <p>We typically respond within 3-5 business days.</p>
     </div>
   </div>
@@ -282,6 +282,20 @@
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Ensure email links are tappable on mobile
+    document.addEventListener('DOMContentLoaded', function() {
+      // Force links to be clickable/tappable on all devices
+      const links = document.querySelectorAll('a[href^="mailto:"]');
+      links.forEach(link => {
+        link.style.display = 'inline-block';
+        link.style.minHeight = '1.5rem';
+        link.style.minWidth = 'fit-content';
+        link.addEventListener('touchstart', function() {
+          // This empty handler ensures touch events are registered on all devices
         });
       });
     });
