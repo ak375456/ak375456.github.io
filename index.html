@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Resume Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-light: #6366f1;
+      --dark: #1f2937;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --white: #ffffff;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light-gray);
+      color: var(--dark);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2.5rem;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+    
+    h1 {
+      color: var(--dark);
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+    }
+    
+    h2 {
+      color: var(--primary);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    h3 {
+      color: var(--dark);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+      color: var(--gray);
+    }
+    
+    ul {
+      padding-left: 1.75rem;
+      margin: 1.25rem 0;
+    }
+    
+    li {
+      margin-bottom: 0.75rem;
+      color: var(--gray);
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    
+    a:hover {
+      color: var(--primary-light);
+      text-decoration: underline;
+    }
+    
+    .last-updated {
+      font-style: italic;
+      color: var(--gray);
+      margin-bottom: 2rem;
+      display: block;
+    }
+    
+    .highlight-box {
+      background-color: rgba(79, 70, 229, 0.05);
+      border-left: 4px solid var(--primary);
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .contact-section {
+      background-color: var(--light-gray);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+    
+    .data-deletion {
+      background-color: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 500;
+      margin-top: 0.5rem;
+      transition: all 0.2s ease;
+    }
+    
+    .btn:hover {
+      background-color: var(--primary-light);
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Generator Privacy Policy</h1>
+    <span class="last-updated">Last Updated: <span id="current-date"></span></span>
+
+    <section>
+      <h2>1. Introduction</h2>
+      <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Resume Generator application. Please read this policy carefully.</p>
+    </section>
+
+    <section>
+      <h2>2. Data We Collect</h2>
+      <p>Our app uses Firebase Analytics to collect anonymous usage data to help improve your experience. This includes:</p>
+      <ul>
+        <li><strong>Template Usage:</strong> Which resume templates are selected most frequently</li>
+        <li><strong>User Interactions:</strong> How often users preview their CVs and generate PDFs</li>
+        <li><strong>Performance Data:</strong> App loading times and responsiveness metrics</li>
+        <li><strong>Device Information:</strong> Device model, OS version, and language settings for troubleshooting</li>
+        <li><strong>Feature Usage:</strong> Which sections of the app are used most often</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <h3>We Do NOT Collect:</h3>
+        <ul>
+          <li>Any personal information you enter in your resumes (names, addresses, phone numbers, etc.)</li>
+          <li>Contact details unless explicitly provided for support</li>
+          <li>Precise location data or GPS information</li>
+          <li>Payment information (our app is free with no in-app purchases)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. How We Use Your Data</h2>
+      <p>The anonymous data we collect helps us:</p>
+      <ul>
+        <li>Improve app performance and stability</li>
+        <li>Identify and fix crashes and bugs</li>
+        <li>Understand which features are most valuable to users</li>
+        <li>Prioritize development of new templates and features</li>
+        <li>Optimize the user experience based on usage patterns</li>
+        <li>Make informed decisions about future updates</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Data Sharing & Disclosure</h2>
+      <p>We do not sell or rent your personal data to third parties. Anonymous analytics data is processed by:</p>
+      <ul>
+        <li><strong>Firebase Analytics:</strong> Google's analytics service that helps us understand app usage</li>
+        <li><strong>Crashlytics:</strong> For identifying and resolving app crashes (if implemented)</li>
+      </ul>
+      <p>These services may collect information according to their own privacy policies.</p>
+    </section>
+
+    <section>
+      <h2>5. Your Rights & Choices</h2>
+      
+      <h3>European Union (GDPR)</h3>
+      <p>Under the General Data Protection Regulation, you have:</p>
+      <ul>
+        <li>The right to access your personal data</li>
+        <li>The right to rectification of inaccurate data</li>
+        <li>The right to erasure ("right to be forgotten")</li>
+        <li>The right to restrict processing</li>
+        <li>The right to data portability</li>
+        <li>The right to object to processing</li>
+      </ul>
+      
+      <h3>California, USA (CCPA/CPRA)</h3>
+      <p>Under California Consumer Privacy Act, you have:</p>
+      <ul>
+        <li>The right to know what personal information is collected</li>
+        <li>The right to delete personal information</li>
+        <li>The right to opt-out of sale of personal information</li>
+        <li>The right to non-discrimination for exercising your rights</li>
+      </ul>
+      
+      <h3>Other Jurisdictions</h3>
+      <p>We comply with applicable data protection laws including:</p>
+      <ul>
+        <li>Canada's PIPEDA</li>
+        <li>Australia's Privacy Act</li>
+        <li>Singapore's PDPA</li>
+        <li>Malaysia's PDPA</li>
+        <li>South Africa's POPI Act</li>
+      </ul>
+      
+      <div class="data-deletion">
+        <h3>Request Data Deletion</h3>
+        <p>To request deletion of your analytics data:</p>
+        <ol>
+          <li>Email us at <a href="mailto:ak3754560@gmail.com">ak3754560@gmail.com</a> with the subject "Data Deletion Request"</li>
+          <li>Include your device ID (found in app settings) if possible</li>
+          <li>We will process your request within 30 days</li>
+        </ol>
+        <a href="mailto:ak3754560@gmail.com?subject=Data%20Deletion%20Request&body=Please%20delete%20all%20analytics%20data%20associated%20with%20my%20usage%20of%20Resume%20Generator.%0D%0A%0D%0ADevice%20ID%20(if%20known):%0D%0A%0D%0AThank%20you." class="btn">Send Deletion Request</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Data Security</h2>
+      <p>We implement appropriate technical and organizational measures to protect your data:</p>
+      <ul>
+        <li>All data transmissions are encrypted</li>
+        <li>Access to analytics data is restricted</li>
+        <li>Regular security reviews of our infrastructure</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Policy Updates</h2>
+      <p>We may update this policy periodically. Significant changes will be:</p>
+      <ul>
+        <li>Notified through in-app announcements</li>
+        <li>Posted with a new "Last Updated" date</li>
+        <li>Available at least 30 days before taking effect</li>
+      </ul>
+    </section>
+
+    <div class="contact-section">
+      <h2>8. Contact Us</h2>
+      <p>For questions about this policy or to exercise your data rights:</p>
+      <p>Email: <a href="mailto:ak3754560@gmail.com">ak3754560@gmail.com</a></p>
+      <p>We typically respond within 3-5 business days.</p>
+    </div>
+  </div>
+
+  <script>
+    // Set current date automatically
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
