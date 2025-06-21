@@ -3,63 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Resume Generator</title>
+  <title>Privacy Policy - Rezume CV Maker</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #4f46e5;
-      --primary-light: #6366f1;
-      --dark: #1f2937;
-      --gray: #6b7280;
-      --light-gray: #f3f4f6;
-      --white: #ffffff;
+      --primary-light: #3E6BC8;
+      --primary-dark: #5B82D6;
+      --secondary-light: #5DC99C;
+      --secondary-dark: #6BD4AA;
+      --background-light: #F8F9FC;
+      --background-dark: #121418;
+      --surface-light: #FFFFFF;
+      --surface-dark: #1E2128;
+      --text-primary-light: #1D1D1D;
+      --text-primary-dark: #E8E8E8;
+      --text-secondary-light: #616161;
+      --text-secondary-dark: #B6B6B6;
+      --error-light: #E54C65;
+      --error-dark: #E56773;
+      --divider-light: #E0E0E0;
+      --divider-dark: #3E3E3E;
     }
     
     body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--light-gray);
-      color: var(--dark);
+      background-color: var(--background-light);
+      color: var(--text-primary-light);
       line-height: 1.6;
       margin: 0;
       padding: 0;
+    }
+    
+    .dark-mode {
+      background-color: var(--background-dark);
+      color: var(--text-primary-dark);
     }
     
     .container {
       max-width: 800px;
       margin: 3rem auto;
       padding: 2.5rem;
-      background: var(--white);
+      background: var(--surface-light);
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
     }
     
+    .dark-mode .container {
+      background: var(--surface-dark);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
     h1 {
-      color: var(--dark);
+      color: var(--primary-light);
       font-size: 2.25rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      border-bottom: 2px solid var(--primary);
+      border-bottom: 2px solid var(--primary-light);
       padding-bottom: 0.5rem;
     }
     
+    .dark-mode h1 {
+      color: var(--primary-dark);
+      border-bottom-color: var(--primary-dark);
+    }
+    
     h2 {
-      color: var(--primary);
+      color: var(--primary-light);
       font-size: 1.5rem;
       font-weight: 600;
       margin-top: 2.5rem;
       margin-bottom: 1rem;
     }
     
+    .dark-mode h2 {
+      color: var(--primary-dark);
+    }
+    
     h3 {
-      color: var(--dark);
+      color: var(--text-primary-light);
       font-size: 1.25rem;
       font-weight: 600;
       margin-top: 1.5rem;
     }
     
+    .dark-mode h3 {
+      color: var(--text-primary-dark);
+    }
+    
     p {
       margin-bottom: 1rem;
-      color: var(--gray);
+      color: var(--text-secondary-light);
+    }
+    
+    .dark-mode p {
+      color: var(--text-secondary-dark);
     }
     
     ul {
@@ -69,67 +106,149 @@
     
     li {
       margin-bottom: 0.75rem;
-      color: var(--gray);
+      color: var(--text-secondary-light);
+    }
+    
+    .dark-mode li {
+      color: var(--text-secondary-dark);
     }
     
     a {
-      color: var(--primary);
+      color: var(--primary-light);
       text-decoration: none;
       font-weight: 500;
       transition: all 0.2s ease;
     }
     
+    .dark-mode a {
+      color: var(--primary-dark);
+    }
+    
     a:hover {
-      color: var(--primary-light);
+      color: var(--secondary-light);
       text-decoration: underline;
+    }
+    
+    .dark-mode a:hover {
+      color: var(--secondary-dark);
     }
     
     .last-updated {
       font-style: italic;
-      color: var(--gray);
+      color: var(--text-secondary-light);
       margin-bottom: 2rem;
       display: block;
     }
     
+    .dark-mode .last-updated {
+      color: var(--text-secondary-dark);
+    }
+    
     .highlight-box {
-      background-color: rgba(79, 70, 229, 0.05);
-      border-left: 4px solid var(--primary);
+      background-color: rgba(62, 107, 200, 0.05);
+      border-left: 4px solid var(--primary-light);
       padding: 1.25rem;
       margin: 1.5rem 0;
       border-radius: 0 8px 8px 0;
     }
     
+    .dark-mode .highlight-box {
+      background-color: rgba(91, 130, 214, 0.1);
+      border-left-color: var(--primary-dark);
+    }
+    
     .contact-section {
-      background-color: var(--light-gray);
+      background-color: rgba(248, 249, 252, 0.7);
       padding: 1.5rem;
       border-radius: 8px;
       margin-top: 2rem;
     }
     
+    .dark-mode .contact-section {
+      background-color: rgba(30, 33, 40, 0.7);
+    }
+    
     .data-deletion {
-      background-color: #fef2f2;
-      border-left: 4px solid #ef4444;
+      background-color: rgba(229, 76, 101, 0.05);
+      border-left: 4px solid var(--error-light);
       padding: 1.25rem;
       margin: 1.5rem 0;
       border-radius: 0 8px 8px 0;
     }
     
+    .dark-mode .data-deletion {
+      background-color: rgba(229, 103, 115, 0.1);
+      border-left-color: var(--error-dark);
+    }
+    
     .btn {
       display: inline-block;
-      background-color: var(--primary);
-      color: white;
+      background: linear-gradient(to right, #21A2D8, #09336D);
+      color: black;
       padding: 0.75rem 1.5rem;
       border-radius: 6px;
       font-weight: 500;
       margin-top: 0.5rem;
-      transition: all 0.2s ease;
     }
     
-    .btn:hover {
+    .dark-mode .btn {
+      background: linear-gradient(to right, #21A2D8, #09336D);
+    }
+    
+    
+    .toggle-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
+    
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
       background-color: var(--primary-light);
-      text-decoration: none;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dark-mode input:checked + .slider {
+      background-color: var(--primary-dark);
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(26px);
     }
     
     @media (max-width: 768px) {
@@ -141,108 +260,229 @@
   </style>
 </head>
 <body>
+  <div class="toggle-container">
+    <label class="toggle-switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+  
   <div class="container">
-    <h1>Rezume -CV Maker Privacy Policy</h1>
+    <h1>Rezume CV Maker Privacy Policy</h1>
     <span class="last-updated">Last Updated: <span id="current-date"></span></span>
 
     <section>
       <h2>1. Introduction</h2>
-      <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information in relation to advertising in our Resume Generator application. Please read this policy carefully.</p>
-    </section>
-
-    <section>
-      <h2>2. Advertising in Our App</h2>
-      <p>Our app uses <strong>Google AdMob</strong> to display ads, which helps us keep the app free. Here's what you need to know:</p>
-      
-      <h3>2.1 Types of Ads Shown</h3>
-      <ul>
-        <li><strong>Banner Ads:</strong> Small ads at the bottom of the screen</li>
-        <li><strong>Interstitial Ads:</strong> Full-screen ads shown between CV edits</li>
-        <li><strong>Rewarded Ads:</strong> Optional ads to unlock premium features</li>
-      </ul>
-
-      <div class="highlight-box">
-        <h3>2.2 Data Used for Ads</h3>
-        <p>AdMob may collect:</p>
-        <ul>
-          <li><strong>Device Information:</strong> OS version, device model</li>
-          <li><strong>Advertising ID:</strong> Non-personal identifier for ad targeting</li>
-          <li><strong>General Location:</strong> Country/city (not precise GPS)</li>
-          <li><strong>App Usage Data:</strong> Interactions with ads</li>
-        </ul>
-        <p><strong>We do NOT collect:</strong> Your name, email, resume content, or exact location.</p>
-      </div>
-
-      <h3>2.3 Personalized vs. Non-Personalized Ads</h3>
-      <p>Depending on your region and consent, you may see:</p>
-      <ul>
-        <li><strong>Personalized Ads:</strong> Tailored to your interests (higher revenue for us)</li>
-        <li><strong>Non-Personalized Ads:</strong> Generic ads (lower revenue but privacy-focused)</li>
-      </ul>
-
-      <!-- Region-Specific Compliance -->
-      <h3>2.4 Your Ad Choices by Region</h3>
+      <p>Welcome to Rezume CV Maker ("we", "our", or "us"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App"). Please read this privacy policy carefully.</p>
       
       <div class="highlight-box">
-        <h4>European Union (GDPR)</h4>
-        <p>We show a <strong>consent popup</strong> where you can:</p>
+        <p><strong>Key Points:</strong></p>
         <ul>
-          <li>Accept personalized ads (uses your Advertising ID)</li>
-          <li>Choose non-personalized ads (limited data usage)</li>
-          <li>Withdraw consent anytime in app settings</li>
+          <li>We use Google Sign-In for authentication</li>
+          <li>We store minimal user data in Firebase Firestore</li>
+          <li>We use Google AdMob for advertising</li>
+          <li>We comply with all applicable privacy laws</li>
+          <li>You have control over your data</li>
         </ul>
-      </div>
-
-      <div class="highlight-box">
-        <h4>California, USA (CCPA/CPRA)</h4>
-        <p>You have the right to:</p>
-        <ul>
-          <li>Opt out of "sale" of your data (via "Do Not Sell My Data" toggle in settings)</li>
-          <li>Request deletion of ad-related data</li>
-        </ul>
-      </div>
-
-      <div class="highlight-box">
-        <h4>Canada (PIPEDA)</h4>
-        <p>We provide:</p>
-        <ul>
-          <li>Transparency about data collection</li>
-          <li>Ability to opt out of personalized ads</li>
-        </ul>
-      </div>
-
-      <div class="data-deletion">
-        <h3>2.5 Opting Out of Ad Personalization</h3>
-        <ol>
-          <li>email us at <a href="mailto:ak375456@gmail.com">ak375456@gmail.com</a></li>
-        </ol>
-        <a href="mailto:ak375456@gmail.com?subject=Ad%20Personalization%20Opt-Out&body=Please%20disable%20personalized%20ads%20for%20my%20account.%0D%0A%0D%0ADevice%20ID%20:%0D%0A%0D%0AThank%20you." class="btn">Request Opt-Out</a>
       </div>
     </section>
 
     <section>
-      <h2>3. Data Sharing & Third Parties</h2>
+      <h2>2. Information We Collect</h2>
+      
+      <h3>2.1 Authentication Data</h3>
+      <p>When you sign in with Google, we collect:</p>
+      <ul>
+        <li>Your Google account email address</li>
+        <li>Your display name (if available)</li>
+        <li>A unique user identifier from Google</li>
+      </ul>
+      <p><strong>We do NOT collect:</strong> Your Google password or any other sensitive account information.</p>
+      
+      <h3>2.2 Premium User Data</h3>
+      <p>For premium users, we store in Firebase Firestore:</p>
+      <ul>
+        <li>Your user ID (from Google authentication)</li>
+        <li>Premium status (true/false)</li>
+        <li>Subscription purchase date (if applicable)</li>
+        <li>Subscription expiration date (if applicable)</li>
+        <li>Transaction ID (for verification)</li>
+      </ul>
+      
+      <h3>2.3 Resume Data</h3>
+      <p>All resume/CV data you create is stored locally on your device. We do not upload or store your resume content on our servers unless you explicitly enable cloud sync (future feature).</p>
+      
+      <h3>2.4 Advertising Data</h3>
+      <p>Our app uses Google AdMob, which may collect:</p>
+      <ul>
+        <li>Device information (OS version, device model)</li>
+        <li>Advertising ID</li>
+        <li>General location (country/city level)</li>
+        <li>App usage data related to ads</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. How We Use Your Information</h2>
+      
+      <h3>3.1 Authentication</h3>
+      <p>We use your Google account information solely to:</p>
+      <ul>
+        <li>Authenticate your identity</li>
+        <li>Provide personalized app experience</li>
+        <li>Link premium subscriptions to your account</li>
+      </ul>
+      
+      <h3>3.2 Premium Features</h3>
+      <p>We use premium user data to:</p>
+      <ul>
+        <li>Verify your subscription status</li>
+        <li>Enable premium features</li>
+        <li>Provide customer support</li>
+        <li>Prevent fraud</li>
+      </ul>
+      
+      <h3>3.3 Advertising</h3>
+      <p>AdMob data is used to:</p>
+      <ul>
+        <li>Display relevant ads</li>
+        <li>Measure ad performance</li>
+        <li>Support the free version of our app</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <h3>3.4 Legal Basis for Processing (GDPR)</h3>
+        <p>For users in the European Economic Area (EEA), our legal basis for collecting and using information is:</p>
+        <ul>
+          <li><strong>Contract:</strong> To provide the services you requested</li>
+          <li><strong>Consent:</strong> For advertising personalization (where applicable)</li>
+          <li><strong>Legitimate Interest:</strong> To improve our services and prevent fraud</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Data Sharing & Third Parties</h2>
+      
+      <h3>4.1 Firebase Services</h3>
+      <p>We use these Firebase services:</p>
+      <ul>
+        <li><strong>Firebase Authentication:</strong> For Google Sign-In</li>
+        <li><strong>Firebase Firestore:</strong> To store premium user data</li>
+        <li><strong>Firebase Analytics:</strong> To understand app usage (anonymous)</li>
+      </ul>
+      
+      <h3>4.2 Advertising Partners</h3>
       <p>We share data with these services for ads:</p>
       <ul>
         <li><strong>Google AdMob:</strong> For ad delivery (<a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>)</li>
-        <li><strong>Mediation Networks:</strong> Such as Meta Audience Network (if used)</li>
       </ul>
-      <p>These partners may collect data according to their policies.</p>
+      
+      <h3>4.3 Legal Requirements</h3>
+      <p>We may disclose information if required by law or to protect our rights.</p>
     </section>
 
     <section>
-      <h2>4. Policy Updates</h2>
-      <p>We may update this policy periodically. Significant changes will be:</p>
+      <h2>5. Data Retention & Deletion</h2>
+      
+      <h3>5.1 Retention Period</h3>
+      <p>We retain your data:</p>
+      <ul>
+        <li>Until you delete your account</li>
+        <li>For premium users: Until subscription ends plus 90 days for records</li>
+        <li>AdMob data: According to Google's policies</li>
+      </ul>
+      
+      <div class="data-deletion">
+        <h3>5.2 How to Delete Your Data</h3>
+        <p>You can request account deletion by:</p>
+        <ol>
+          <li>Going to Settings → Account in the app</li>
+          <li>Selecting "Delete Account"</li>
+          <li>Confirming the deletion</li>
+        </ol>
+        <p>Or email us at: <a href="mailto:ak375456@gmail.com">ak375456@gmail.com</a></p>
+        <a href="mailto:ak375456@gmail.com?subject=Account%20Deletion%20Request&body=Please%20delete%20my%20Rezume%20account%20and%20all%20associated%20data.%0D%0A%0D%0AUser%20ID/Email:%0D%0A%0D%0AThank%20you." class="btn">Request Account Deletion</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. User Rights</h2>
+      
+      <h3>6.1 Your Rights Under GDPR</h3>
+      <p>If you're in the EEA, you have the right to:</p>
+      <ul>
+        <li>Access your personal data</li>
+        <li>Correct inaccurate data</li>
+        <li>Request deletion</li>
+        <li>Restrict processing</li>
+        <li>Data portability</li>
+        <li>Object to processing</li>
+        <li>Withdraw consent</li>
+      </ul>
+      
+      <h3>6.2 Your Rights Under CCPA</h3>
+      <p>California residents can:</p>
+      <ul>
+        <li>Know what personal data is collected</li>
+        <li>Access their data</li>
+        <li>Request deletion</li>
+        <li>Opt-out of "sale" of data</li>
+        <li>Not face discrimination</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <h3>6.3 Exercising Your Rights</h3>
+        <p>To exercise these rights:</p>
+        <ol>
+          <li>Use in-app settings where available</li>
+          <li>Email us at <a href="mailto:ak375456@gmail.com">ak375456@gmail.com</a></li>
+          <li>Include "Privacy Rights Request" in subject</li>
+          <li>Provide details of your request</li>
+        </ol>
+        <p>We'll respond within 30 days as required by law.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. International Data Transfers</h2>
+      <p>Our services are hosted globally using Firebase servers. When we transfer your data internationally, we ensure appropriate safeguards are in place, including:</p>
+      <ul>
+        <li>Google's compliance with EU-US Privacy Shield (where applicable)</li>
+        <li>Standard Contractual Clauses</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Children's Privacy</h2>
+      <p>Our app is not directed to children under 13. We do not knowingly collect personal information from children under 13. If we learn we have collected such information, we will delete it immediately.</p>
+    </section>
+
+    <section>
+      <h2>9. Security Measures</h2>
+      <p>We implement appropriate security measures including:</p>
+      <ul>
+        <li>Firebase security rules to protect database access</li>
+        <li>HTTPS encryption for all data transfers</li>
+        <li>Regular security reviews</li>
+      </ul>
+      <p>However, no method of transmission over the Internet is 100% secure.</p>
+    </section>
+
+    <section>
+      <h2>10. Policy Updates</h2>
+      <p>We may update this policy. Significant changes will be:</p>
       <ul>
         <li>Notified through in-app announcements</li>
         <li>Posted with a new "Last Updated" date</li>
         <li>Available at least 30 days before taking effect</li>
       </ul>
+      <p>Your continued use after changes constitutes acceptance.</p>
     </section>
 
     <div class="contact-section">
-      <h2>5. Contact Us</h2>
-      <p>For questions about this policy or to exercise your data rights:</p>
+      <h2>11. Contact Us</h2>
+      <p>For questions about this policy or to exercise your rights:</p>
       <p>Email: <a href="mailto:ak375456@gmail.com">ak375456@gmail.com</a></p>
       <p>We typically respond within 3-5 business days.</p>
     </div>
@@ -254,6 +494,29 @@
       year: 'numeric',
       month: 'long',
       day: 'numeric'
+    });
+    
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check for saved theme preference or use preferred color scheme
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      body.classList.add('dark-mode');
+      themeToggle.checked = true;
+    }
+    
+    themeToggle.addEventListener('change', function() {
+      if (this.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
     });
     
     // Smooth scrolling for anchor links
@@ -268,15 +531,12 @@
     
     // Ensure email links are tappable on mobile
     document.addEventListener('DOMContentLoaded', function() {
-      // Force links to be clickable/tappable on all devices
       const links = document.querySelectorAll('a[href^="mailto:"]');
       links.forEach(link => {
         link.style.display = 'inline-block';
         link.style.minHeight = '1.5rem';
         link.style.minWidth = 'fit-content';
-        link.addEventListener('touchstart', function() {
-          // This empty handler ensures touch events are registered on all devices
-        });
+        link.addEventListener('touchstart', function() {});
       });
     });
   </script>
